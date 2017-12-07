@@ -34,7 +34,9 @@ Provide this plugin only for Internet Explorer 10+, e.g. using User-Agent string
         ...
         providers: [
             ...
-            browser.name === 'IE' && parseInt(browser.version, 10) <= 11 ? [ACTUAL_INPUT_EVENT_MANAGER_PLUGIN_PROVIDER] : [],
+            browser.name === 'IE' && parseInt(browser.version, 10) <= 11 
+                ? [ACTUAL_INPUT_EVENT_MANAGER_PLUGIN_PROVIDER]
+                : [],
         ],
     })
     export class CoreModule { ... }
