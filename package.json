@@ -1,7 +1,7 @@
 {
   "name": "actual-input-event-manager-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Internet Explorer 10+ implements 'input' event but it erroneously fires under various situations, e.g. when placeholder changes, or a control is focused. This plugin prevents an otherwise pristine field from being dirtied in this cases.",
   "keywords": [
     "angular",
     "input",
