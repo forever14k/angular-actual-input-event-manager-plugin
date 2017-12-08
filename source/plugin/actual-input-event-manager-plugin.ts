@@ -1,12 +1,11 @@
 import { Inject, Injectable, Provider } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { EVENT_MANAGER_PLUGINS } from '@angular/platform-browser';
+import { EVENT_MANAGER_PLUGINS, DOCUMENT } from '@angular/platform-browser';
 
 
 @Injectable()
 export class ActualInputEventManagerPlugin {
 
-    constructor(@Inject(DOCUMENT) private _document: Document) { }
+    constructor(@Inject(DOCUMENT) private _document: Document) { console.log(1); }
 
 
     supports(eventName: string): boolean {
