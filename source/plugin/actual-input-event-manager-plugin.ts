@@ -5,7 +5,8 @@ import { EVENT_MANAGER_PLUGINS, DOCUMENT } from '@angular/platform-browser';
 @Injectable()
 export class ActualInputEventManagerPlugin {
 
-    constructor(@Inject(DOCUMENT) private _document: Document) { console.log(1); }
+    constructor(@Inject(DOCUMENT) private _document: Document) {
+    }
 
 
     supports(eventName: string): boolean {
@@ -64,5 +65,6 @@ function isElementSupportsInputEvent(element: Element | null): boolean {
 export const ACTUAL_INPUT_EVENT_MANAGER_PLUGIN_PROVIDER: Provider = {
     provide: EVENT_MANAGER_PLUGINS,
     useClass: ActualInputEventManagerPlugin,
-    multi: true
+    deps: [DOCUMENT],
+    multi: true,
 };
