@@ -7,7 +7,7 @@ This plugin prevents an otherwise pristine field from being dirtied in this case
 
 
 ## Usage:
-1. npm install angular-actual-input-event-manager-plugin
+1. `npm install angular-actual-input-event-manager-plugin`
 2. 
 ```
     import { ACTUAL_INPUT_EVENT_MANAGER_PLUGIN_PROVIDER } from 'angular-actual-input-event-manager-plugin';

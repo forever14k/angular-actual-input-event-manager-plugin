@@ -1,12 +1,12 @@
 import { Inject, Injectable, Provider } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { EVENT_MANAGER_PLUGINS } from '@angular/platform-browser';
+import { EVENT_MANAGER_PLUGINS, DOCUMENT } from '@angular/platform-browser';
 
 
 @Injectable()
 export class ActualInputEventManagerPlugin {
 
-    constructor(@Inject(DOCUMENT) private _document: Document) { }
+    constructor(@Inject(DOCUMENT) private _document: Document) {
+    }
 
 
     supports(eventName: string): boolean {
@@ -65,5 +65,6 @@ function isElementSupportsInputEvent(element: Element | null): boolean {
 export const ACTUAL_INPUT_EVENT_MANAGER_PLUGIN_PROVIDER: Provider = {
     provide: EVENT_MANAGER_PLUGINS,
     useClass: ActualInputEventManagerPlugin,
-    multi: true
+    deps: [DOCUMENT],
+    multi: true,
 };
